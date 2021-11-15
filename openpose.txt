@@ -1,0 +1,18 @@
+git clone https://github.com/gsethi2409/tf-pose-estimation.git
+
+pip install -r requirements.txt
+
+download http://www.mediafire.com/file/qlzzr20mpocnpa3/graph_opt.pb
+paste it into models
+open pose\tf-pose-estimation\models\graph\cmu
+
+cd tf_pose/pafprocess
+
+swig -python -c++ pafprocess.i && python setup.py build_ext --inplace
+
+if facing any error try to update visual studio and python
+
+
+
+
+python run_webcam.py --camera "video path paste here"
